@@ -6,6 +6,10 @@
  * Copyright: 3rd Wave Media Ltd.
  * Website: https://themes.3rdwavemedia.com/
 */
+
+.item p {
+  font-size: 0.9rem;
+}
 body {
   font-family: 'Lato', arial, sans-serif;
   color: #434343;
