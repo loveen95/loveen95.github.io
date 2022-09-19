@@ -221,13 +221,45 @@ a.dotted-link:hover {
 .latest .item .title a:hover {
   color: #5f6b77;
 }
-
-.latest .item .project-image:hover {
+/* .latest .item .project-image:hover{
   -webkit-opacity: 0.2;
   -moz-opacity: 0.2;
   opacity: 0.2;
+} */
+
+.latest .item .project-image{
+  margin-bottom: 0px;
+}
+.detail {
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  z-index: 2;
+  display :flex;
+  align-items: center;
+  flex-flow: column;
+  opacity: 0;
+}
+.detail::before {
+  content: "";
+  position: absolute; z-index: 3;
+  left: 0; right: 0; top: 0; bottom: 0;
+  background-color: rgba(0,0,0,.7);
+  border-radius: 5px;
+  height: 96%;
 
 }
+.detail h4 {
+  position: relative; z-index: 3;
+  transition: all .3s ease; 
+  top:44%;
+  transform: translate(0%, -50%);
+  
+}
+figure:hover .detail { opacity: 1;}
+figure:hover .detail h4 {transform: translateY(0);}
+figure:hover img {transform: scale(1);}
+
+.detail h4{font-size:25px; color: rgb(255, 249, 249);}
 
 .latest .divider {
   margin-bottom: 60px;
