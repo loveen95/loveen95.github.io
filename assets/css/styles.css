@@ -24,7 +24,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   color: #778492;
 }
-
 a {
   color: #3AAA64;
   -webkit-transition: all 0.4s ease-in-out;
@@ -35,14 +34,13 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
   color: #2d844e;
+  text-decoration: underline;
 }
 
 a:focus {
   text-decoration: none;
 }
-
 .btn, a.btn {
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
@@ -89,7 +87,6 @@ a.btn-cta-secondary, .btn-cta-secondary {
   font-weight: 600;
   text-transform: uppercase;
 }
-
 a.btn-cta-secondary:hover, a.btn-cta-secondary:not(:disabled):not(.disabled):active:focus, .btn-cta-secondary:hover, .btn-cta-secondary:not(:disabled):not(.disabled):active:focus {
   background: #3893bd;
   border: 1px solid #3893bd;
@@ -206,7 +203,7 @@ a.dotted-link:hover {
 
 .latest .item .title {
   font-size: 18px;
-  margin-top: 0;
+  margin-top: 20px;
 }
 
 .latest .item .title .label {
@@ -239,27 +236,56 @@ a.dotted-link:hover {
   flex-flow: column;
   opacity: 0;
 }
+.detail_2 {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex-flow: column;
+  opacity: 0;
+}
 .detail::before {
   content: "";
   position: absolute; z-index: 3;
   left: 0; right: 0; top: 0; bottom: 0;
   background-color: rgba(0,0,0,.7);
   border-radius: 5px;
-  height: 96%;
-
+}
+figure {
+  margin-bottom: 0;
+}
+.detail_2::before {
+  content: "";
+  position: absolute; z-index: 3;
+  left: 0; right: 0; top: 0; bottom: 0;
+  background-color: rgba(0,0,0,.7);
+  border-radius: 5px;
 }
 .detail h4 {
   position: relative; z-index: 3;
   transition: all .3s ease; 
   top:44%;
   transform: translate(0%, -50%);
-  
 }
+
+.detail_2 p {
+  position: relative; z-index: 3;
+  transition: all .3s ease; 
+  top:44%;
+  transform: translate(0%, -50%);
+}
+
+
 figure:hover .detail { opacity: 1;}
 figure:hover .detail h4 {transform: translateY(0);}
-figure:hover img {transform: scale(1);}
+
+figure:hover .detail_2 { opacity: 1;}
+figure:hover .detail_2 p {transform: translateY(50%);}
+
 
 .detail h4{font-size:25px; color: rgb(255, 249, 249);}
+.detail_2 p{font-size: 4px;  color:#fff;}
 
 .latest .divider {
   margin-bottom: 60px;
@@ -362,12 +388,13 @@ figure:hover img {transform: scale(1);}
 .projects .item .title a:hover {
   color: #5f6b77;
 }
-
+/*
 .projects .item .project-image:hover{
   -webkit-opacity: 0.2;
   -moz-opacity: 0.2;
   opacity: 0.2;
 }
+*/
 
 /* Work Section */
 .experience .item {
